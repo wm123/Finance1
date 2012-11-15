@@ -13,6 +13,12 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    
+//    CGRect wholeWindow=CGRectMake(0, 20, 320, 320);
+//    drawK = [[ASCandlestickCharts alloc] initWithFrame:wholeWindow];
+//    [self.window addSubview: drawK];
+//    [self.window makeKeyAndVisible]; 
+    
     return YES;
 }
 							

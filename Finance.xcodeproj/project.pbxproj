@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E1BFB7D116538F3C000279B6 /* ASConvertPriceToLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = E1BFB7D016538F3C000279B6 /* ASConvertPriceToLocation.m */; };
 		E1CA918A164FB8120017B8F3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1CA9189164FB8120017B8F3 /* UIKit.framework */; };
 		E1CA918C164FB8120017B8F3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1CA918B164FB8120017B8F3 /* Foundation.framework */; };
 		E1CA918E164FB8120017B8F3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1CA918D164FB8120017B8F3 /* CoreGraphics.framework */; };
@@ -23,6 +24,9 @@
 		E1CA91B0164FB8120017B8F3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1CA918B164FB8120017B8F3 /* Foundation.framework */; };
 		E1CA91B8164FB8120017B8F3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E1CA91B6164FB8120017B8F3 /* InfoPlist.strings */; };
 		E1CA91BB164FB8120017B8F3 /* FinanceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E1CA91BA164FB8120017B8F3 /* FinanceTests.m */; };
+		E1CA91C7164FB91D0017B8F3 /* ASCandlestickCharts.m in Sources */ = {isa = PBXBuildFile; fileRef = E1CA91C6164FB91D0017B8F3 /* ASCandlestickCharts.m */; };
+		E1EFD5A016521653004BD701 /* ASStockInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = E1EFD59F16521653004BD701 /* ASStockInfo.m */; };
+		E1EFD5A4165217F6004BD701 /* ASDrawKLine.m in Sources */ = {isa = PBXBuildFile; fileRef = E1EFD5A3165217F6004BD701 /* ASDrawKLine.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +40,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E1BFB7CF16538F3C000279B6 /* ASConvertPriceToLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASConvertPriceToLocation.h; sourceTree = "<group>"; };
+		E1BFB7D016538F3C000279B6 /* ASConvertPriceToLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASConvertPriceToLocation.m; sourceTree = "<group>"; };
 		E1CA9185164FB8120017B8F3 /* Finance.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Finance.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1CA9189164FB8120017B8F3 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		E1CA918B164FB8120017B8F3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -58,6 +64,12 @@
 		E1CA91B7164FB8120017B8F3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		E1CA91B9164FB8120017B8F3 /* FinanceTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FinanceTests.h; sourceTree = "<group>"; };
 		E1CA91BA164FB8120017B8F3 /* FinanceTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FinanceTests.m; sourceTree = "<group>"; };
+		E1CA91C5164FB91D0017B8F3 /* ASCandlestickCharts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASCandlestickCharts.h; sourceTree = "<group>"; };
+		E1CA91C6164FB91D0017B8F3 /* ASCandlestickCharts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASCandlestickCharts.m; sourceTree = "<group>"; };
+		E1EFD59E16521653004BD701 /* ASStockInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASStockInfo.h; sourceTree = "<group>"; };
+		E1EFD59F16521653004BD701 /* ASStockInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASStockInfo.m; sourceTree = "<group>"; };
+		E1EFD5A2165217F6004BD701 /* ASDrawKLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASDrawKLine.h; sourceTree = "<group>"; };
+		E1EFD5A3165217F6004BD701 /* ASDrawKLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASDrawKLine.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +99,13 @@
 		E1CA917A164FB8120017B8F3 = {
 			isa = PBXGroup;
 			children = (
+				E1BFB7CF16538F3C000279B6 /* ASConvertPriceToLocation.h */,
+				E1BFB7D016538F3C000279B6 /* ASConvertPriceToLocation.m */,
+				E1EFD5A2165217F6004BD701 /* ASDrawKLine.h */,
+				E1EFD5A3165217F6004BD701 /* ASDrawKLine.m */,
+				E1EFD59E16521653004BD701 /* ASStockInfo.h */,
+				E1EFD59F16521653004BD701 /* ASStockInfo.m */,
+				E1CA91C4164FB81F0017B8F3 /* Classes */,
 				E1CA918F164FB8120017B8F3 /* Finance */,
 				E1CA91B3164FB8120017B8F3 /* FinanceTests */,
 				E1CA9188164FB8120017B8F3 /* Frameworks */,
@@ -158,6 +177,15 @@
 				E1CA91B6164FB8120017B8F3 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E1CA91C4164FB81F0017B8F3 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				E1CA91C5164FB91D0017B8F3 /* ASCandlestickCharts.h */,
+				E1CA91C6164FB91D0017B8F3 /* ASCandlestickCharts.m */,
+			);
+			name = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -274,6 +302,10 @@
 				E1CA9196164FB8120017B8F3 /* main.m in Sources */,
 				E1CA919A164FB8120017B8F3 /* ASAppDelegate.m in Sources */,
 				E1CA91A6164FB8120017B8F3 /* ASViewController.m in Sources */,
+				E1CA91C7164FB91D0017B8F3 /* ASCandlestickCharts.m in Sources */,
+				E1EFD5A016521653004BD701 /* ASStockInfo.m in Sources */,
+				E1EFD5A4165217F6004BD701 /* ASDrawKLine.m in Sources */,
+				E1BFB7D116538F3C000279B6 /* ASConvertPriceToLocation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -448,6 +480,7 @@
 				E1CA91C0164FB8120017B8F3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E1CA91C1164FB8120017B8F3 /* Build configuration list for PBXNativeTarget "FinanceTests" */ = {
 			isa = XCConfigurationList;
@@ -456,6 +489,7 @@
 				E1CA91C3164FB8120017B8F3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

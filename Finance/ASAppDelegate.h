@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ASCandlestickCharts.h"
 
 @interface ASAppDelegate : UIResponder <UIApplicationDelegate>
 

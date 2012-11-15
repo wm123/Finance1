@@ -7,7 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ASCandlestickCharts.h"
+#import "ASDrawKLine.h"
+#import "ASStockInfo.h"
+#import "ASConvertPriceToLocation.h"
 
 @interface ASViewController : UIViewController
+{
+    //ASCandlestickCharts * drawK;
+    UIImageView * m_imageBackgroundView;//画板
+    NSArray * m_arrStockInfos;
+    //int m_nChange;
+}
 
 @end
