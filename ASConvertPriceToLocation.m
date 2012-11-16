@@ -40,18 +40,18 @@
 //    return aPoint;
 //}
 
--(double)convertRectCenterYToLocation:(ASStockInfo *) aStockInfo
+-(double)convertBeginOrEnd:(ASStockInfo *) aStockInfo
 {
-
     double begin = [aStockInfo GetBeginePrice];
     double end = [aStockInfo GetEndPrice];
-
-    double rectCenterY = (end-begin)/2;
-    if (end < begin) {
-        rectCenterY = (begin - end)/2;
+    
+    double dbBeginOrEnd = begin;
+    
+    if (end > begin) {
+        dbBeginOrEnd = end;
     }
     
-    return rectCenterY;
+    return dbBeginOrEnd;
 }
 
 -(double)convertRectHeightToLocation:(ASStockInfo *) aStockInfo 
@@ -113,16 +113,18 @@
         if(dbHighestMax == [stockInfo GetHighestPrice])
         {
             
-           CGPoint cgpHighest = CGPointMake(dbXLocation, m_imageView.frame.origin.y);
+           CGPoint cgpHighest = CGPointMake(dbXLocation, 0);
             
            double lowestPrice = [stockInfo GetLowestPrice];
             
-           //CGPoint cgpLowest = CGPointMake(dbXLocation, m_imageView.frame.origin.y+(m_imageView.frame.size.height-(lowestPrice-dbLowestMin)*Pixel*100));
-           CGPoint cgpLowest = CGPointMake(dbXLocation, (lowestPrice - dbLowestMin)*Pixel*100);
+           CGPoint cgpLowest = CGPointMake(dbXLocation, (m_imageView.frame.size.height-(lowestPrice-dbLowestMin)*Pixel*100));
+           //CGPoint cgpLowest = CGPointMake(dbXLocation, (lowestPrice - dbLowestMin)*Pixel*100);
             
-           double centerY = [self convertRectCenterYToLocation:stockInfo];
+           double dbBeginOrEnd = [self convertBeginOrEnd:stockInfo];
+           double dbRectHeightHalf = [self convertRectHeightToLocation:stockInfo]/2;
+           double dbRectCenterY = (dbHighestMax - dbBeginOrEnd+dbRectHeightHalf)*Pixel*100;
             
-           CGPoint cgpRectCenter = CGPointMake(dbXLocation, cgpHighest.y+centerY*Pixel*100);
+           CGPoint cgpRectCenter = CGPointMake(dbXLocation, dbRectCenterY);
             
            ASDrawKLine * drawKLine = [[ASDrawKLine alloc] initWithHigestPoint:cgpHighest andLowestPoint:cgpLowest andRectCenterPoint:cgpRectCenter andRectWidth:rectWidth andRectHeight:rectHeight andImageDrawKLineBackground:m_imageView andColorKLine:[UIColor redColor]];
             
@@ -135,13 +137,14 @@
             
             double highestPrice = [stockInfo GetHighestPrice];
             
-            CGPoint cgpHighest = CGPointMake(dbXLocation, m_imageView.frame.origin.y+(dbHighestMax- highestPrice)*Pixel*100);
+            CGPoint cgpHighest = CGPointMake(dbXLocation, (dbHighestMax- highestPrice)*Pixel*100);
+            CGPoint cgpLowest = CGPointMake(dbXLocation, m_imageView.frame.size.height);
             
-            CGPoint cgpLowest = CGPointMake(dbXLocation, m_imageView.frame.origin.y+m_imageView.frame.size.height);
+            double dbBeginOrEnd = [self convertBeginOrEnd:stockInfo];
+            double dbRectHeightHalf = [self convertRectHeightToLocation:stockInfo]/2;
+            double dbRectCenterY = (dbHighestMax - dbBeginOrEnd+dbRectHeightHalf)*Pixel*100;
             
-            double centerY = [self convertRectCenterYToLocation:stockInfo];
-            
-            CGPoint cgpRectCenter = CGPointMake(dbXLocation, cgpHighest.y+centerY*Pixel*100);
+            CGPoint cgpRectCenter = CGPointMake(dbXLocation, dbRectCenterY);
             
             ASDrawKLine * drawKLine = [[ASDrawKLine alloc] initWithHigestPoint:cgpHighest andLowestPoint:cgpLowest andRectCenterPoint:cgpRectCenter andRectWidth:rectWidth andRectHeight:rectHeight andImageDrawKLineBackground:m_imageView andColorKLine:[UIColor redColor]];
             
@@ -152,18 +155,22 @@
         else{
             double highestPrice = [stockInfo GetHighestPrice];
             
-            double dbHighestYLocation = m_imageView.frame.origin.y+(dbHighestMax-highestPrice)*Pixel*100;
+            double dbHighestYLocation = (dbHighestMax-highestPrice)*Pixel*100;
             
             CGPoint cgpHighest = CGPointMake(dbXLocation, dbHighestYLocation);
             
             double lowestPrice = [stockInfo GetLowestPrice];
             
             //double dbLowestLocation =m_imageView.frame.origin.y+(lowestPrice-dbLowestMin)*Pixel*100;
-            double dbLowestLocation = m_imageView.frame.origin.y + m_imageView.frame.size.height - (lowestPrice-dbLowestMin)*Pixel*100;
+            double dbLowestLocation = m_imageView.frame.size.height - (lowestPrice-dbLowestMin)*Pixel*100;
             
             CGPoint cgpLowest = CGPointMake(dbXLocation, dbLowestLocation);
             
-            CGPoint cgpRectCenter = CGPointMake(dbXLocation, cgpHighest.y+[self convertRectCenterYToLocation:stockInfo]*Pixel*100);
+            double dbBeginOrEnd = [self convertBeginOrEnd:stockInfo];
+            double dbRectHeightHalf = [self convertRectHeightToLocation:stockInfo]/2;
+            double dbRectCenterY = (dbHighestMax - dbBeginOrEnd+dbRectHeightHalf)*Pixel*100;
+            
+            CGPoint cgpRectCenter = CGPointMake(dbXLocation, dbRectCenterY);
         
             ASDrawKLine * drawKLine = [[ASDrawKLine alloc] initWithHigestPoint:cgpHighest andLowestPoint:cgpLowest andRectCenterPoint:cgpRectCenter andRectWidth:rectWidth andRectHeight:rectHeight andImageDrawKLineBackground:m_imageView andColorKLine:[UIColor greenColor]];
         

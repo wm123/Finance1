@@ -29,13 +29,14 @@
     [m_imageBackgroundView setBackgroundColor:[UIColor blackColor]];
     [self.view addSubview:m_imageBackgroundView];
     
-    ASStockInfo * stockInfo1 = [[ASStockInfo alloc] initWithHighestPrice:10.43 andLowestPrice:10.08 andBeginPrice:10.32 andEndPrice:10.10];
-    ASStockInfo * stockInfo2 = [[ASStockInfo alloc] initWithHighestPrice:11.11 andLowestPrice:10.73 andBeginPrice:11.11 andEndPrice:10.75];
-    ASStockInfo * stockInfo3 = [[ASStockInfo alloc] initWithHighestPrice:11.00 andLowestPrice:10.56 andBeginPrice:10.74 andEndPrice:10.93];
-    ASStockInfo * stockInfo4 = [[ASStockInfo alloc] initWithHighestPrice:10.14 andLowestPrice:9.50 andBeginPrice:9.50 andEndPrice:10.14];
-    ASStockInfo * stockInfo5 = [[ASStockInfo alloc] initWithHighestPrice:9.45 andLowestPrice:9.16 andBeginPrice:9.34 andEndPrice:9.35];
+    ASStockInfo * stockInfo1 = [[ASStockInfo alloc] initWithHighestPrice:10.43 andLowestPrice:10.03 andBeginPrice:10.32 andEndPrice:10.2];
+    ASStockInfo * stockInfo2 = [[ASStockInfo alloc] initWithHighestPrice:11.11 andLowestPrice:10.73 andBeginPrice:10.93 andEndPrice:10.85];
+    ASStockInfo * stockInfo3 = [[ASStockInfo alloc] initWithHighestPrice:11.00 andLowestPrice:10.40 andBeginPrice:10.74 andEndPrice:10.43];
+    ASStockInfo * stockInfo4 = [[ASStockInfo alloc] initWithHighestPrice:10.13 andLowestPrice:10.00 andBeginPrice:10.02 andEndPrice:10.02];
+    ASStockInfo * stockInfo5 = [[ASStockInfo alloc] initWithHighestPrice:9.45 andLowestPrice:9.12
+        andBeginPrice:9.34 andEndPrice:9.14];
     
-    m_arrStockInfos = [[NSArray alloc] initWithObjects:stockInfo1,stockInfo2,stockInfo3,stockInfo4,stockInfo5, nil];
+    m_arrStockInfos = [[NSArray alloc] initWithObjects:stockInfo1,stockInfo2,stockInfo3,stockInfo4,stockInfo5,nil];
     
     //[self.view addSubview:imageBackgroundView];
     

@@ -18,7 +18,7 @@
 
 //-(CGPoint)convertHighestToLocation:(ASStockInfo *) aStockInfo andI:(int) i;
 //-(CGPoint)convertLowestToLocation:(ASStockInfo *) aStockInfo andI:(int) i;
--(double)convertRectCenterYToLocation:(ASStockInfo *) aStockInfo;
+-(double)convertBeginOrEnd:(ASStockInfo *) aStockInfo;
 -(double)convertRectHeightToLocation:(ASStockInfo *) aStockInfo;
 
 -(id)init:(NSArray *)aStockInfo andXLocation:(UIImageView *) aImageView;
